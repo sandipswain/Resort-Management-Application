@@ -6,6 +6,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Modal from "../Modals/Modal";
 
 const links = [
   {
@@ -70,9 +71,7 @@ const Navbar = () => {
               <li className="nav-btn">
                 {button ? (
                   <Link to="sign-up" className="btn--link">
-                    <Button variant="outlined" className="btn btn--outline">
-                      Sign Up
-                    </Button>
+                    <Modal />
                   </Link>
                 ) : (
                   <Link

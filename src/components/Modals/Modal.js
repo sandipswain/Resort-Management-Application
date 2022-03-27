@@ -21,7 +21,7 @@ export default function FormDialog() {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open form dialog
+        Sign Up
       </Button>
       <Dialog
         open={open}
