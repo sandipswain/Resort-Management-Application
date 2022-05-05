@@ -1,11 +1,12 @@
-import React from "react";
+import { Divider, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import React from "react";
 import UserForm from "../FormComponent/UserForm";
+import "./Modal.css";
+import image1 from "../../images/image1.jpg";
 
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
@@ -27,23 +28,22 @@ export default function FormDialog() {
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
+        className="dialog"
+        maxWidth={false}
       >
-        <DialogTitle id="form-dialog-title">Sign Up</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <UserForm />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
+        <div className="modal">
+          <img src={image1} alt="not Found" className="modalImg" />
+          <div className="modal_content">
+            <DialogTitle id="form-dialog-title">
+              <Typography className="modalHeader">SignUp</Typography>
+            </DialogTitle>
+            <Divider variant="middle" />
+            <DialogContent>
+              <UserForm />
+            </DialogContent>
+            <Divider variant="middle" />
+          </div>
+        </div>
       </Dialog>
     </div>
   );

@@ -1,0 +1,61 @@
+.textContainer {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden !important;
+}
+
+.formControl {
+  width: 100% !important;
+}
+
+.gridItem {
+  width: 100% !important;
+  height: 8rem !important;
+  color: #efdcce;
+}
+
+.gridItems {
+  width: 100% !important;
+  height: 8rem !important;
+}
+
+.gridItem:last-child {
+  max-width: 100% !important;
+  flex-grow: 1;
+}
+
+.label {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 4rem !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.textFields {
+  background-color: rgba(189, 212, 255, 0.685) !important;
+  font-size: 1.5rem !important;
+}
+
+.continueBtn {
+  margin: 1.5rem 0 !important;
+  height: 3.5rem;
+  width: 20%;
+  font-size: 1rem !important;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.btn {
+  margin-right: 1rem !important;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.confirmContainer {
+  width: 70rem !important;
+}

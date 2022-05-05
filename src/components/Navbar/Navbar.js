@@ -57,7 +57,7 @@ const Navbar = () => {
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               {links.map((link) => {
                 return (
-                  <div className="nav-item">
+                  <div className="nav-item" key={link.text}>
                     <Link
                       to={`/${link.path}`}
                       className="nav-links"
@@ -70,19 +70,15 @@ const Navbar = () => {
               })}
               <li className="nav-btn">
                 {button ? (
-                  <Link to="sign-up" className="btn--link">
+                  <div to="sign-up" className="btn--link">
                     <Modal />
-                  </Link>
+                  </div>
                 ) : (
-                  <Link
-                    to="sign-up"
-                    className="btn--link"
-                    onClick={closeMobileMenu}
-                  >
+                  <div className="btn--link" onClick={closeMobileMenu}>
                     <Button variant="outlined" className="btn--mobile">
                       Sign Up
                     </Button>
-                  </Link>
+                  </div>
                 )}
               </li>
             </ul>

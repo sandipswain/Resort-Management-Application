@@ -1,0 +1,15 @@
+.featureSection {
+  margin: 4em 0;
+}
+
+.featureCard:hover {
+  box-shadow: 0 1.5rem 4rem rgba(#111, 0.15);
+  transition: transform 0.3s;
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+.iconSize {
+  font-size: 7rem !important;
+  display: inline-block;
+  color: #6cc66cc3;
+}

@@ -1,0 +1,17 @@
+.modal {
+  height: 80vh !important;
+  width: 80vw !important;
+  display: flex;
+  overflow: hidden;
+}
+
+.modalImg {
+  height: 80vh;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.modalHeader {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+}

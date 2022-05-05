@@ -1,13 +1,12 @@
-import React from "react";
-import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import {
-  List,
-  AppBar,
-  Toolbar,
   Button,
-  ListItemText,
+  List,
   ListItem,
+  ListItemText,
+  Typography,
 } from "@material-ui/core";
+import React from "react";
+import "./Form.css";
 
 function FormUserDetails({ values, nextStep, prevStep }) {
   const continueNext = (e) => {
@@ -49,45 +48,37 @@ function FormUserDetails({ values, nextStep, prevStep }) {
   ];
 
   return (
-    <MuiThemeProvider>
-      <>
-        <AppBar position="static">
-          <Toolbar>Confirm User Data</Toolbar>
-        </AppBar>
-        <List>
-          {listConfig.map((list) => (
-            <ListItem>
-              <ListItemText primary={list.primary} secondary={list.secondary} />
-            </ListItem>
-          ))}
-        </List>
+    <>
+      <Typography variant="h3">Confirm User Details</Typography>
+      <List className="confirmContainer">
+        {listConfig.map((list) => (
+          <ListItem className="listItem" key={list.primary}>
+            <ListItemText primary={list.primary} secondary={list.secondary} />
+          </ListItem>
+        ))}
+      </List>
 
-        <br />
+      <br />
+      <div className="btnContainer">
         <Button
           variant="contained"
           color="primary"
-          style={styles.button}
           onClick={continueNext}
+          className="btn continueBtn"
         >
           Confirm & Continue
         </Button>
         <Button
           variant="contained"
           color="secondary"
-          style={styles.button}
           onClick={backPrev}
+          className="continueBtn"
         >
           Back
         </Button>
-      </>
-    </MuiThemeProvider>
+      </div>
+    </>
   );
 }
-
-const styles = {
-  button: {
-    margin: 15,
-  },
-};
 
 export default FormUserDetails;

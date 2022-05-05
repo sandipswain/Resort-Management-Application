@@ -3,17 +3,9 @@ import FormPersonalDetails from "./FormPersonalDetails";
 import FormUserDetails from "./FormUserDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
+import { obj } from "./formConfig";
 
 function UserForm() {
-  const obj = {
-    step: 1,
-    firstName: "",
-    lastName: "",
-    email: "",
-    occupation: "",
-    city: "",
-    bio: "",
-  };
   const [details, setDetails] = useState(obj);
   // Proceed to the next step
   const nextStep = () => {
@@ -33,8 +25,8 @@ function UserForm() {
     setDetails((prev) => ({ ...prev, [name]: value }));
   };
   const { step } = details;
-  const { firstName, lastName, email, occupation, city, bio } = details;
-  const values = { firstName, lastName, email, occupation, city, bio };
+  const { firstName, lastName, doB, email, occupation, city, bio } = details;
+  const values = { firstName, lastName, doB, email, occupation, city, bio };
   switch (step) {
     case 1:
       return (

@@ -1,25 +1,14 @@
+import {
+  Button,
+  FilledInput,
+  FormControl,
+  Grid,
+  InputLabel,
+} from "@material-ui/core";
 import React from "react";
-import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import { TextField, Button } from "@material-ui/core";
-
+import "./Form.css";
+import { personDetails } from "./formConfig";
 function FormPersonalDetails({ values, nextStep, prevStep, handleChange }) {
-  const personDetails = [
-    {
-      placeholder: "Enter Your Occupation",
-      name: "occupation",
-      label: "Occupation",
-    },
-    {
-      placeholder: "Enter Your City",
-      name: "city",
-      label: "City",
-    },
-    {
-      placeholder: "Enter Your Bio",
-      name: "bio",
-      label: "Bio",
-    },
-  ];
   const continueNext = (e) => {
     e.preventDefault();
     nextStep();
@@ -30,44 +19,47 @@ function FormPersonalDetails({ values, nextStep, prevStep, handleChange }) {
   };
   const extractValue = (values, name) => values.name;
   return (
-    <MuiThemeProvider>
-      <>
+    <>
+      <Grid container className="textContainer" spacing={3}>
         {personDetails.map((person) => (
-          <TextField
-            fullWidth
-            placeholder={person.placeholder}
-            name={person.name}
-            label={person.label}
-            onChange={(e) => handleChange(e)}
-            defaultValue={extractValue(values, person.name)}
-          />
+          <Grid item xs={6} sm={6} key={person.name} className="gridItems">
+            <FormControl variant="filled" className="formControl">
+              <InputLabel htmlFor={person.name} shrink={true} className="label">
+                {person.label}
+              </InputLabel>
+              <FilledInput
+                className="textFields"
+                id={person.name}
+                onChange={(e) => handleChange(e)}
+                type={person.type}
+                placeholder={person.placeholder}
+                defaultValue={extractValue(values, person.name)}
+              />
+            </FormControl>
+          </Grid>
         ))}
-        <br />
+      </Grid>
+      <br />
+      <div className="btnContainer">
         <Button
           variant="contained"
           color="primary"
-          style={styles.button}
           onClick={continueNext}
+          className="btn continueBtn"
         >
           Continue
         </Button>
         <Button
           variant="contained"
           color="secondary"
-          style={styles.button}
           onClick={backPrev}
+          className="continueBtn"
         >
           Back
         </Button>
-      </>
-    </MuiThemeProvider>
+      </div>
+    </>
   );
 }
-
-const styles = {
-  button: {
-    margin: 15,
-  },
-};
 
 export default FormPersonalDetails;

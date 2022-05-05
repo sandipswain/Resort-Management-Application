@@ -1,6 +1,12 @@
-import React from "react";
-import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import { AppBar, Toolbar, TextField, Button } from "@material-ui/core";
+import {
+  Button,
+  FilledInput,
+  FormControl,
+  Grid,
+  InputLabel,
+} from "@material-ui/core";
+import "./Form.css";
+import { userDetailsConfig } from "./formConfig";
 
 function FormUserDetails({ values, nextStep, handleChange }) {
   const continueNext = (e) => {
@@ -8,59 +14,46 @@ function FormUserDetails({ values, nextStep, handleChange }) {
     nextStep();
   };
 
-  const userDetailsConfig = [
-    {
-      placeholder: "Enter Your First Name",
-      name: "firstName",
-      label: "First Name",
-    },
-    {
-      placeholder: "Enter Your Last Name",
-      name: "lastName",
-      label: "Last Name",
-    },
-    {
-      placeholder: "Enter Your Email",
-      name: "email",
-      label: "Email",
-    },
-  ];
   const extractValue = (values, name) => values.name;
 
   return (
-    <MuiThemeProvider>
-      <>
-        <AppBar position="static">
-          <Toolbar>Enter User Details</Toolbar>
-        </AppBar>
+    <>
+      <Grid container className="textContainer" spacing={3}>
         {userDetailsConfig.map((userDetails) => (
-          <TextField
-            fullWidth
-            placeholder={userDetails.placeholder}
-            name={userDetails.name}
-            label={userDetails.label}
-            onChange={(e) => handleChange(e)}
-            defaultValue={extractValue(values, userDetails.name)}
-          />
+          <Grid item xs={6} sm={6} key={userDetails.name} className="gridItem">
+            <FormControl variant="filled" className="formControl">
+              <InputLabel
+                htmlFor={userDetails.name}
+                shrink={true}
+                className="label"
+              >
+                {userDetails.label}
+              </InputLabel>
+              <FilledInput
+                className="textFields"
+                id={userDetails.name}
+                onChange={(e) => handleChange(e)}
+                type={userDetails.type}
+                placeholder={userDetails.placeholder}
+                defaultValue={extractValue(values, userDetails.name)}
+              />
+            </FormControl>
+          </Grid>
         ))}
-        <br />
+      </Grid>
+      <br />
+      <div className="btnContainer">
         <Button
           variant="contained"
           color="primary"
-          style={styles.button}
+          className="continueBtn"
           onClick={continueNext}
         >
           Continue
         </Button>
-      </>
-    </MuiThemeProvider>
+      </div>
+    </>
   );
 }
-
-const styles = {
-  button: {
-    margin: 15,
-  },
-};
 
 export default FormUserDetails;
