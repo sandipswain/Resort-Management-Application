@@ -35,7 +35,7 @@ function FeatureSection() {
       className="featureSection"
     >
       {cardConfig.map((card) => (
-        <Grid item xs={2} sm={2} key={card.header}>
+        <Grid item xs={5} sm={2} key={card.header} className="cardGrid">
           <FeatureCard card={card} />
         </Grid>
       ))}

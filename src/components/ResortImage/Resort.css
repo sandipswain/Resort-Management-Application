@@ -1,0 +1,42 @@
+.imageDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.resortText {
+    width: 100%;
+}
+
+.textContainer {
+    display: flex;
+    width: 40% !important;
+    height: 100% !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    height: 40rem;
+    width: 50%;
+    margin: 4rem 0 !important;
+}
+
+.resortImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.resortContainer {
+    margin: 4rem 0;
+}
+
+.imageDivRev {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}

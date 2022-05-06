@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <AppBar position="static" className="navbar">
+      <AppBar position="fixed" className="navbar">
         <Toolbar className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>

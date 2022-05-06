@@ -1,117 +1,122 @@
 @keyframes moveInbottom {
-    0% {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes moveInleft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
 
-    80% {
-        transform: translate(1rem);
-    }
+  80% {
+    transform: translate(1rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes moveInright {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
 
-    80% {
-        transform: translate(-1rem);
-    }
+  80% {
+    transform: translate(-1rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .heroImage {
-    height: 90vh;
-    background-image: linear-gradient(to right bottom, rgba(134, 134, 134, 0.8), rgba(174, 211, 211, 0.801)), url("../../images/image1.jpg");
-    background-size: cover;
-    background-position: top;
-    position: relative;
+  margin-top: 8rem;
+  height: 90vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(134, 134, 134, 0.8),
+      rgba(174, 211, 211, 0.801)
+    ),
+    url("../../images/image1.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
 }
 
 .heroImage__textBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heroImage-primary {
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 6rem !important;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem !important;
 }
 
 .heroImage-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInleft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .heroImage-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInright 1s ease-out;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInright 1s ease-out;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    /* Inline-block treats element as text so defining so can align it in center in its parent class */
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    position: relative;
-    font-size: 1.6rem;
-    border: none;
-    cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  /* Inline-block treats element as text so defining so can align it in center in its parent class */
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0.1rem 0.2rem rgba(#111, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.1rem 0.2rem rgba(#111, 0.2);
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+  background-color: #fff;
+  color: #777;
 }
 
 .btn--animated {
-    animation: moveInbottom 1s ease-out 0.45s;
-    /* Before the animation starts the styles will be applied */
-    animation-fill-mode: backwards;
+  animation: moveInbottom 1s ease-out 0.45s;
+  /* Before the animation starts the styles will be applied */
+  animation-fill-mode: backwards;
 }

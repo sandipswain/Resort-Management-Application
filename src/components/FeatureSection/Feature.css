@@ -13,3 +13,7 @@
   display: inline-block;
   color: #6cc66cc3;
 }
+
+.cardGrid {
+  margin: 2rem !important;
+}
