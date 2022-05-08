@@ -7,25 +7,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Modal from "../Modals/Modal";
+import { links } from "../FormComponent/formConfig";
 
-const links = [
-  {
-    path: "",
-    text: "Home",
-  },
-  {
-    path: "about",
-    text: "About Us",
-  },
-  {
-    path: "contact",
-    text: "Contact Us",
-  },
-  {
-    path: "gallery",
-    text: "Gallery",
-  },
-];
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);

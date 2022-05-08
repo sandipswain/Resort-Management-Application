@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.textContainer {
+.headerContainer {
     display: flex;
     width: 40% !important;
     height: 100% !important;

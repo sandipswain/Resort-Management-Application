@@ -12,7 +12,7 @@ function ResortImage({ imageData }) {
               key={data.header}
               className={i % 2 === 0 ? "imageDiv" : "imageDivRev"}
             >
-              <Grid item className="textContainer" key={data.header}>
+              <Grid item className="headerContainer" key={data.header}>
                 <Typography variant="h3" className="resortText">
                   {data.header}
                 </Typography>
