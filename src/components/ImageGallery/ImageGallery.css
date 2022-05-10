@@ -1,0 +1,16 @@
+.galleryHeader {
+    margin-top: 10rem;
+    color: rgb(91, 211, 155);
+}
+
+.galleryImage {
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+}
+
+.galleryContainer {
+    margin: 0 4rem;
+    margin-top: 2rem;
+    color: rgb(84, 242, 168);
+}

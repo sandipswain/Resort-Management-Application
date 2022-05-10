@@ -15,6 +15,10 @@ export const links = [
     text: "Home",
   },
   {
+    path: "amenities",
+    text: "Amenities",
+  },
+  {
     path: "about",
     text: "About Us",
   },
