@@ -15,6 +15,10 @@ export const links = [
     text: "Home",
   },
   {
+    path: "events",
+    text: "Events",
+  },
+  {
     path: "amenities",
     text: "Amenities",
   },
@@ -25,10 +29,6 @@ export const links = [
   {
     path: "contact",
     text: "Contact Us",
-  },
-  {
-    path: "gallery",
-    text: "Gallery",
   },
 ];
 
